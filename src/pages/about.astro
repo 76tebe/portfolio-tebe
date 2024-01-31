@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.svelte"
 import Nav from "../components/Nav.svelte"
 import Button from "../components/Button/Button.svelte"
+import Switcher from "../components/Switcher.svelte"
 ---
 
 <Layout title="About me">
@@ -10,4 +11,5 @@ import Button from "../components/Button/Button.svelte"
             <Button type="primary" idleLabel="Resume" hoveredLabel="Explore My Journey" />
             <Button type="secondary" idleLabel="Secondary" hoveredLabel="Secondary Lagi" />
         </div>
+        <Switcher trigger={true} client:idle></Switcher>
 </Layout>
