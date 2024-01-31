@@ -1,8 +1,8 @@
-<script>
-    export let size;
-    export let mode;
+<script lang="ts">
 </script>
 
-<div>
-
+<div class="background">
+    <div class="trigger">
+        
+    </div>
 </div>

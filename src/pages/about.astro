@@ -1,8 +1,13 @@
 ---
 import Layout from "../layouts/Layout.svelte"
-import Switcher from "../components/Switcher.svelte"
+import Nav from "../components/Nav.svelte"
+import Button from "../components/Button/Button.svelte"
 ---
 
 <Layout title="About me">
-    <Switcher mode="light" size="large"/>
+        <Nav />
+        <div>
+            <Button type="primary" idleLabel="Resume" hoveredLabel="Explore My Journey" />
+            <Button type="secondary" idleLabel="Secondary" hoveredLabel="Secondary Lagi" />
+        </div>
 </Layout>

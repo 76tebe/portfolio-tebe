@@ -1,0 +1,44 @@
+.btn {
+  transition: background 0.4s linear;
+  will-change: background;
+}
+
+.btn:hover span:nth-of-type(1) em {
+  opacity: 0;
+  transform: rotateX(90deg) scaleX(0.9) translate3d(0, -10px, 0);
+}
+
+.btn:hover span:nth-of-type(2) em {
+  opacity: 1;
+  transform: rotateX(0deg) scaleX(1) translateZ(0);
+  transition: transform 0.75s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 0.35s linear 0.3s;
+}
+
+.btn span {
+  position: relative;
+  display: block;
+  perspective: 108px;
+}
+
+.btn span:nth-of-type(2) {
+    margin-top: -24px;
+}
+
+.btn em {
+  font-style: normal;
+  display: inline-block;
+  will-change: transform, opacity, transition;
+  transition: transform 0.55s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 0.35s linear 0.2s;
+}
+
+.btn span:nth-of-type(1) em {
+  transform-origin: top;
+}
+
+.btn span:nth-of-type(2) em {
+  opacity: 0;
+  transform: rotateX(-90deg) scaleX(0.9) translate3d(0, 10px, 0);
+  transform-origin: bottom;
+}

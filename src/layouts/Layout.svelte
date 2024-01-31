@@ -1,5 +1,6 @@
 <script>
     export let title;
+	import "../main.css";
 </script>
 
 <!DOCTYPE html>
