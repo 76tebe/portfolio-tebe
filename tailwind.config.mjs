@@ -86,8 +86,8 @@ export default {
         "1rem",
         {
           lineHeight: "1.5rem",
-          letterSpacing: "0.5px",
-          fontWeight: "600",
+          letterSpacing: "0.2px",
+          fontWeight: "500",
         },
       ],
     },

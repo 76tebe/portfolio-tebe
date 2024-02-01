@@ -1,6 +1,8 @@
 <script>
     export let title;
 	import "../main.css";
+	import 'remixicon/fonts/remixicon.css'
+	import Nav from "../components/Nav/Nav.svelte";
 </script>
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@
 		<link rel="stylesheet" href="../main.css">
 		<title>{title}</title>
 	</head>
-	<body class="{title == 'Home' ? 'mx-[120px]' : 'mx-[200px]'} my-20">
+	<main class=" {title == 'Home' ? 'w-[1200px]' : 'w-[1040px]'} mx-auto my-20 text-neutral-80">
 		<slot />
-	</body>
+	</main>
 </html>

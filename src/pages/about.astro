@@ -1,15 +1,55 @@
 ---
-import Layout from "../layouts/Layout.svelte"
-import Nav from "../components/Nav.svelte"
-import Button from "../components/Button/Button.svelte"
-import Switcher from "../components/Switcher.svelte"
+import Layout from "../layouts/Layout.svelte";
+import Nav from "../components/Nav/Nav.svelte";
+import ava from "../assets/tebe-ava.jpg";
+import imagePlaceholder from "../assets/image-placeholder.png";
+import { Image } from "astro:assets";
+
+import NavItem from "../components/Nav/NavItem.svelte";
 ---
 
+<Nav client:idle />
 <Layout title="About me">
-        <Nav />
-        <div>
-            <Button type="primary" idleLabel="Resume" hoveredLabel="Explore My Journey" />
-            <Button type="secondary" idleLabel="Secondary" hoveredLabel="Secondary Lagi" />
-        </div>
-        <Switcher trigger={true} client:idle></Switcher>
+  <section class="flex gap-36 mb-28">
+    <div class="flex flex-col gap-6">
+      <h1 class="text-heading-2">A Glimpse About Myself</h1>
+      <h2 class="text-heading-5 text-[1.25rem]">BEING A PIXEL PUSHER</h2>
+      <div class="flex flex-col gap-4 text-body-1 text-justify">
+        <p>
+          Hey there! I'm Tebe, an adventurer in the design world who traded
+          pixels for passion. Graduating from Brawijaya University with an
+          Information Systems degree, my journey began in the tech trenches of
+          our university community.
+        </p>
+        <p>
+          From graphic design and photo editing escapades to the wild world of
+          UX, I've got an audacious spirit as a Product Designer. I've battled
+          it out in national design competitions, crafting digital wonders,
+          snagging awards, and dropping knowledge bombs along the way.
+        </p>
+      </div>
+    </div>
+    <Image src={ava} alt="Image of Tebe" width="380" class="rounded-2xl" />
+  </section>
+  <section class="flex gap-36">
+    <Image src={imagePlaceholder} alt="Image of Cat" class="rounded-2xl" />
+    <div class="flex flex-col gap-6">
+      <h2 class="text-heading-5 text-[1.25rem]">LIFE BEYOND THE SCREEN</h2>
+      <div class="flex flex-col gap-4 text-body-1 text-justify">
+        <p>
+          Off the design grid, you'll find me lacing up for a game of futsal or
+          football&#9135;my go-to escapes when I'm not immersed in the design
+          world. My love for cats isn't just a card-carrying affair&#9135;it's a
+          full-on commitment to playing and bonding with these whiskered
+          companions. They're not just pets; they're my stress-relief partners,
+          adding a touch of purr-fection to life.
+        </p>
+        <p>
+          In downtime, tunes from Laufey and Rich Brian set the backdrop for my
+          whimsical adventures. Gaming? It's not just a pastime; it's a journey
+          into pixels with a side of laughter.
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
