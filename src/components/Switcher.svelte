@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { quintOut } from "svelte/easing";
+  import { fly } from "svelte/transition";
 
   export let trigger;
 
@@ -151,7 +153,7 @@
   </button>
   <span class="flex flex-col gap-1 text-body-2">
     Switch to the
-    <span class="flex items-start gap-1 font-semibold">
+    <span class="flex items-start gap-1 font-semibold" >
       {#if trigger == false}
         Dark Side
         <i class="ri-moon-fill leading-none"></i>

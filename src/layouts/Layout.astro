@@ -1,0 +1,30 @@
+---
+import "../main.css";
+import "remixicon/fonts/remixicon.css";
+import Nav from "../components/Nav/Nav.svelte";
+import { ViewTransitions } from "astro:transitions";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Tebe Portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="../main.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+	<Nav client:idle />
+    <main
+      class=`${title == 'Home' ? 'max-w-[1200px]' : 'max-w-[1040px]'} mx-auto text-neutral-80 pt-44`
+    >
+      <slot />
+    </main>
+  </body>
+</html>

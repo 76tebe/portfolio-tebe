@@ -6,7 +6,7 @@
   // export let scrolled;
 </script>
 
-<nav class="flex w-screen items-center justify-between px-20 py-8">
+<nav class="fixed top-0 flex w-screen items-center justify-between px-20 py-8">
   <Switcher trigger={false} />
   <ul class="flex gap-4 p-4">
     <NavItem label="Home" href="/" />

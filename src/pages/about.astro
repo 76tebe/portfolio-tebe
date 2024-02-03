@@ -1,16 +1,15 @@
 ---
-import Layout from "../layouts/Layout.svelte";
+import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav/Nav.svelte";
 import ava from "../assets/tebe-ava.jpg";
 import imagePlaceholder from "../assets/image-placeholder.png";
 import { Image } from "astro:assets";
 
-import NavItem from "../components/Nav/NavItem.svelte";
+import test23 from "../assets/test23.jpg";
 ---
 
-<Nav client:idle />
 <Layout title="About me">
-  <section class="flex gap-36 mb-28">
+  <section class="flex gap-36 mb-28 p-4">
     <div class="flex flex-col gap-6">
       <h1 class="text-heading-2">A Glimpse About Myself</h1>
       <h2 class="text-heading-5 text-[1.25rem]">BEING A PIXEL PUSHER</h2>
@@ -29,10 +28,36 @@ import NavItem from "../components/Nav/NavItem.svelte";
         </p>
       </div>
     </div>
-    <Image src={ava} alt="Image of Tebe" width="380" class="rounded-2xl" />
+    <Image
+      src={test23}
+      alt="Image of Tebe"
+      width="380"
+      height="506"
+      class="max-w-none rounded-2xl"
+    />
   </section>
   <section class="flex gap-36">
-    <Image src={imagePlaceholder} alt="Image of Cat" class="rounded-2xl" />
+    <div class="relative contents">
+      <Image
+        src={imagePlaceholder}
+        alt="Image of Cat"
+        class="rounded-2xl"
+      />
+      <div class="absolute flex">
+        <Image
+          src={imagePlaceholder}
+          alt="Image of Cat"
+          class="rounded-2xl rotate-[-15deg]"
+        />
+        <Image
+          src={imagePlaceholder}
+          alt="Image of Cat"
+          class="rounded-2xl rotate-[15deg]"
+        />
+      </div>
+    </div>
+    <!-- <Image src={imagePlaceholder} alt="Image of Cat" class="relative rounded-2xl" /> -->
+
     <div class="flex flex-col gap-6">
       <h2 class="text-heading-5 text-[1.25rem]">LIFE BEYOND THE SCREEN</h2>
       <div class="flex flex-col gap-4 text-body-1 text-justify">
