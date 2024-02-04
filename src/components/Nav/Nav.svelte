@@ -22,7 +22,7 @@
     />
     <Button
       type="primary"
-      href="https://drive.google.com/file/d/16E9sHd9ROOUh39jQFG6qORpgS3j-qyci/view?usp=sharing"
+      href="https://drive.google.com/file/d/16E9sHd9ROOUh39jQFG6qORpgS3j-qyci/view"
       target="_blank"
       idleLabel="Resume"
       hoveredLabel="Explore My Journey"

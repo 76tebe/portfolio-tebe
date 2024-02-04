@@ -2,11 +2,12 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import IndonesianFlag from "../assets/indonesia.svg";
+import { Separator } from "bits-ui";
 ---
 
 <Layout title="Tebe's Portfolio">
   <svg
-  class="absolute -top-[800px] -left-[320px] -z-10"
+    class="absolute -top-[800px] -left-[320px] -z-10"
     width="947"
     height="1210"
     viewBox="0 0 947 1210"
@@ -72,9 +73,35 @@ import IndonesianFlag from "../assets/indonesia.svg";
       <h1>Meet Tebe! 🙋🏼‍♂️</h1>
       <h1>a Product Designer based in Jakarta 🇮🇩</h1>
     </div>
-    <p class="flex text-body-1 text-[1.5rem] gap-2">
-      Previously
-      <span class="text-[#E0004D]">@Halodoc</span>
-    </p>
+    <div
+      class="flex text-body-1 text-[1.5rem] text-neutral-50 gap-4 items-center"
+    >
+      <p class="">
+        Currently
+        <span
+          class="bg-gradient-to-br from-[#005BAA] from-35% to-[#EFAC21] to-100% bg-clip-text text-transparent"
+          >@Astra Financial</span
+        >
+      </p>
+      <Separator.Root
+        class="w-0.5 h-6 bg-neutral-200"
+        orientation="horizontal"
+        decorative={false}
+      />
+      <p>
+        Previously
+        <span class="text-[#E0004D]">@Halodoc</span>
+      </p>
+    </div>
+  </div>
+  <div class="mt-48 flex flex-col gap-10 text-heading-1">
+    <h1 class="text-[4rem] -tracking-[.64px]">
+      Designing <span class="bg-[url('/wonders.png')] bg-cover bg-no-repeat bg-clip-text text-transparent">wonders</span>, molding <span class="bg-[url('/dreams.png')] bg-cover bg-no-repeat bg-clip-text text-transparent">dreams</span>.
+    </h1>
+    <h2 class="text-[2.25rem] -tracking-[.36px] text-neutral-50 font-normal">
+      His creativity sparks magic in every pixel.
+    </h2>
   </div>
 </Layout>
+
+<style></style>
