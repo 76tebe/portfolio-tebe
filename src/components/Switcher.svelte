@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { quintOut } from "svelte/easing";
-  import { fly } from "svelte/transition";
 
   export let trigger;
 

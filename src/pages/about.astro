@@ -1,15 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav/Nav.svelte";
 import ava from "../assets/tebe-ava.jpg";
 import imagePlaceholder from "../assets/image-placeholder.png";
 import { Image } from "astro:assets";
-
 import test23 from "../assets/test23.jpg";
+import { AspectRatio } from "bits-ui";
 ---
 
 <Layout title="About me">
-  <section class="flex gap-36 mb-28 p-4">
+  <section class="flex gap-36 mb-28">
     <div class="flex flex-col gap-6">
       <h1 class="text-heading-2">A Glimpse About Myself</h1>
       <h2 class="text-heading-5 text-[1.25rem]">BEING A PIXEL PUSHER</h2>
@@ -30,34 +29,35 @@ import test23 from "../assets/test23.jpg";
     </div>
     <Image
       src={test23}
+      widths={[328, 360, 380]}
+      sizes={`(max-width: 640px) 328px, (max-width: 768px) 360px, 380px`}
       alt="Image of Tebe"
-      width="380"
-      height="506"
-      class="max-w-none rounded-2xl"
+      class="rounded-xl"
     />
   </section>
   <section class="flex gap-36">
-    <div class="relative contents">
+    <div class=`relative min-w-[${test23.width}px]`>
       <Image
-        src={imagePlaceholder}
-        alt="Image of Cat"
+        src={test23}
+        alt="Image of Cat"widths={[328, 360, 380]}
+        sizes={`(max-width: 640px) 328px, (max-width: 768px) 360px, 380px`}
         class="rounded-2xl"
       />
-      <div class="absolute flex">
+      <div class="absolute flex -bottom-8 -right-[30%]">
         <Image
-          src={imagePlaceholder}
+          src={test23}
           alt="Image of Cat"
+          width="120"
           class="rounded-2xl rotate-[-15deg]"
         />
         <Image
-          src={imagePlaceholder}
+          src={test23}
           alt="Image of Cat"
+          width="120"
           class="rounded-2xl rotate-[15deg]"
         />
       </div>
     </div>
-    <!-- <Image src={imagePlaceholder} alt="Image of Cat" class="relative rounded-2xl" /> -->
-
     <div class="flex flex-col gap-6">
       <h2 class="text-heading-5 text-[1.25rem]">LIFE BEYOND THE SCREEN</h2>
       <div class="flex flex-col gap-4 text-body-1 text-justify">

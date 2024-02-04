@@ -6,10 +6,12 @@
   export let type;
   export let idleLabel;
   export let hoveredLabel;
+  export let href;
+  export let target;
 </script>
 
 <Button.Root
-  {type}
+  {href} {target}
   class="btn flex flex-col items-center overflow-hidden px-4 py-3 h-12 text-button
   {type == 'primary'
     ? 'bg-neutral-80 text-white'

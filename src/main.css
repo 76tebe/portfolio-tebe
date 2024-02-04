@@ -6,5 +6,13 @@
   html {
     font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   }
+
+  ::-moz-selection {
+    background: #FFF56A;
+  }
+  
+  ::selection {
+    background: #FFF56A;
+  }
 }
 

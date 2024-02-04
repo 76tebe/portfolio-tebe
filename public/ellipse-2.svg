@@ -1,0 +1,13 @@
+<svg width="1009" height="1009" viewBox="0 0 1009 1009" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <ellipse id="Ellipse 2" cx="504.27" cy="504.27" rx="267.952" ry="660.154"
+        transform="rotate(-45 504.27 504.27)" fill="url(#paint0_radial_386_1446)" fill-opacity="0.5" />
+    <defs>
+        <radialGradient id="paint0_radial_386_1446" cx="0" cy="0" r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(504.27 504.27) rotate(90) scale(660.154 267.952)">
+            <stop stop-color="#0F172A" stop-opacity="0.4" />
+            <stop offset="1" stop-color="white" stop-opacity="0" />
+        </radialGradient>
+    </defs>
+</svg>
