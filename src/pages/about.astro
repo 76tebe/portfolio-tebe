@@ -1,80 +1,86 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.svelte";
 import ava from "../assets/tebe-ava.jpg";
 import imagePlaceholder from "../assets/image-placeholder.png";
 import { Image } from "astro:assets";
 import test23 from "../assets/test23.jpg";
 import { AspectRatio } from "bits-ui";
+
+const title = "About me";
 ---
 
-<Layout title="About me">
-  <section class="flex gap-36 mb-28">
-    <div class="flex flex-col gap-6">
-      <h1 class="text-heading-2">A Glimpse About Myself</h1>
-      <h2 class="text-heading-5 text-[1.25rem]">BEING A PIXEL PUSHER</h2>
-      <div class="flex flex-col gap-4 text-body-1 text-justify">
-        <p>
-          Hey there! I'm Tebe, an adventurer in the design world who traded
-          pixels for passion. Graduating from Brawijaya University with an
-          Information Systems degree, my journey began in the tech trenches of
-          our university community.
-        </p>
-        <p>
-          From graphic design and photo editing escapades to the wild world of
-          UX, I've got an audacious spirit as a Product Designer. I've battled
-          it out in national design competitions, crafting digital wonders,
-          snagging awards, and dropping knowledge bombs along the way.
-        </p>
+<Layout {title}>
+  <Main {title}>
+    <section class="flex gap-36 mb-28">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-heading-2">A Glimpse About Myself</h1>
+        <h2 class="text-heading-5 text-[1.25rem]">BEING A PIXEL PUSHER</h2>
+        <div class="flex flex-col gap-4 text-body-1 text-justify">
+          <p>
+            Hey there! I'm Tebe, an adventurer in the design world who traded
+            pixels for passion. Graduating from Brawijaya University with an
+            Information Systems degree, my journey began in the tech trenches of
+            our university community.
+          </p>
+          <p>
+            From graphic design and photo editing escapades to the wild world of
+            UX, I've got an audacious spirit as a Product Designer. I've battled
+            it out in national design competitions, crafting digital wonders,
+            snagging awards, and dropping knowledge bombs along the way.
+          </p>
+        </div>
       </div>
-    </div>
-    <Image
-      src={test23}
-      widths={[328, 360, 380]}
-      sizes={`(max-width: 640px) 328px, (max-width: 768px) 360px, 380px`}
-      alt="Image of Tebe"
-      class="rounded-xl"
-    />
-  </section>
-  <section class="flex gap-36">
-    <div class=`relative min-w-[${test23.width}px]`>
       <Image
         src={test23}
-        alt="Image of Cat"widths={[328, 360, 380]}
+        widths={[328, 360, 380]}
         sizes={`(max-width: 640px) 328px, (max-width: 768px) 360px, 380px`}
+        alt="Image of Tebe"
         class="rounded-2xl"
       />
-      <div class="absolute flex -bottom-8 -right-[30%]">
+    </section>
+    <section class="flex gap-36">
+      <div class=`relative min-w-[${test23.width}px]`>
         <Image
           src={test23}
           alt="Image of Cat"
-          width="120"
-          class="rounded-2xl rotate-[-15deg]"
+          widths={[328, 360, 380]}
+          sizes={`(max-width: 640px) 328px, (max-width: 768px) 360px, 380px`}
+          class="rounded-2xl"
         />
-        <Image
-          src={test23}
-          alt="Image of Cat"
-          width="120"
-          class="rounded-2xl rotate-[15deg]"
-        />
+        <div class="absolute flex -bottom-8 -right-[30%]">
+          <Image
+            src={test23}
+            alt="Image of Cat"
+            width="120"
+            class="rounded-xl rotate-[-15deg]"
+          />
+          <Image
+            src={test23}
+            alt="Image of Cat"
+            width="120"
+            class="rounded-xl rotate-[15deg]"
+          />
+        </div>
       </div>
-    </div>
-    <div class="flex flex-col gap-6">
-      <h2 class="text-heading-5 text-[1.25rem]">LIFE BEYOND THE SCREEN</h2>
-      <div class="flex flex-col gap-4 text-body-1 text-justify">
-        <p>
-          Off the design grid, you'll find me lacing up for a game of futsal or
-          football&#9135;my go-to escapes when I'm not immersed in the design
-          world. My love for cats isn't just a card-carrying affair&#9135;it's a
-          full-on commitment to playing and bonding with these whiskered
-          companions. They're not just pets; they're my stress-relief partners,
-          adding a touch of purr-fection to life.
-        </p>
-        <p>
-          In downtime, tunes from Laufey and Rich Brian set the backdrop for my
-          whimsical adventures. Gaming? It's not just a pastime; it's a journey
-          into pixels with a side of laughter.
-        </p>
+      <div class="flex flex-col gap-6">
+        <h2 class="text-heading-5 text-[1.25rem]">LIFE BEYOND THE SCREEN</h2>
+        <div class="flex flex-col gap-4 text-body-1 text-justify">
+          <p>
+            Off the design grid, you'll find me lacing up for a game of futsal
+            or football&#9135;my go-to escapes when I'm not immersed in the
+            design world. My love for cats isn't just a card-carrying
+            affair&#9135;it's a full-on commitment to playing and bonding with
+            these whiskered companions. They're not just pets; they're my
+            stress-relief partners, adding a touch of purr-fection to life.
+          </p>
+          <p>
+            In downtime, tunes from Laufey and Rich Brian set the backdrop for
+            my whimsical adventures. Gaming? It's not just a pastime; it's a
+            journey into pixels with a side of laughter.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </Main>
 </Layout>

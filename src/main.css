@@ -9,10 +9,12 @@
 
   ::-moz-selection {
     background: #FFF56A;
+    color: #334155;
   }
   
   ::selection {
     background: #FFF56A;
+    color: #334155;
   }
 }
 
