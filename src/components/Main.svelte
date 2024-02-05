@@ -9,9 +9,3 @@
 >
   <slot />
 </main>
-
-<style>
-    main {
-        height: calc(100svh - 144px);
-    }
-</style>

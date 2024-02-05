@@ -1,5 +1,4 @@
 <script lang="ts">
-
   export let trigger;
 
   function switcher() {
@@ -41,14 +40,16 @@
   };
 </script>
 
-<div class="flex gap-4 items-center text-neutral-80 transition-all duration-300">
+<div
+  class="flex gap-4 items-center text-neutral-90 transition-all duration-300"
+>
   <button
     on:click={switcher}
     class="
   flex w-20 h-20 justify-center items-center rounded-xl border-[0.5px]
   {trigger == false
-      ? 'border-neutral-40 bg-gradient-to-b from-neutral-10 from-0% to-neutral-20 to-100%'
-      : 'border-neutral-60 bg-gradient-to-b from-neutral-70 from-[-30%] to-neutral-50 to-100%'}"
+      ? 'border-neutral-20 bg-gradient-to-b from-white from-0% to-neutral-5 to-100%'
+      : 'border-neutral-60 bg-gradient-to-b from-neutral-80 from-[-30%] to-neutral-40 to-100%'}"
   >
     <div class="trigger">
       {#if trigger == false}
@@ -66,7 +67,7 @@
             height="40.5"
             rx="6.25"
             fill="white"
-            stroke="#94A3B8"
+            stroke="#B2B5BD"
             stroke-width="0.5"
           />
           <rect
@@ -76,7 +77,7 @@
             height="32.8333"
             rx="5.75"
             fill="url(#paint0_linear_250_93)"
-            stroke="url(#paint1_linear_250_93)"
+            stroke="#F5F6F7"
             stroke-width="0.5"
           />
           <defs>
@@ -88,19 +89,8 @@
               y2="41"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#E2E8F0" />
-              <stop offset="1" stop-color="white" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_250_93"
-              x1="14.0001"
-              y1="7.66669"
-              x2="14.0001"
-              y2="24.3334"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#F1F5F9" />
-              <stop offset="1" stop-color="#F1F5F9" />
+              <stop stop-color="#E1E2E5" />
+              <stop offset="1" stop-color="#F5F6F7" />
             </linearGradient>
           </defs>
         </svg>
@@ -118,8 +108,8 @@
             width="27.1667"
             height="40.5"
             rx="6.25"
-            fill="#475569"
-            stroke="#475569"
+            fill="#575A5F"
+            stroke="#575A5F"
             stroke-width="0.5"
           />
           <rect
@@ -129,7 +119,7 @@
             height="32.8333"
             rx="5.75"
             fill="url(#paint0_linear_250_97)"
-            stroke="#64748B"
+            stroke="#71747A"
             stroke-width="0.5"
           />
           <defs>
@@ -141,8 +131,8 @@
               y2="34.3334"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#475569" />
-              <stop offset="1" stop-color="#94A3B8" />
+              <stop stop-color="#575A5F" />
+              <stop offset="1" stop-color="#B2B5BD" />
             </linearGradient>
           </defs>
         </svg>
@@ -151,7 +141,7 @@
   </button>
   <span class="flex flex-col gap-1 text-body-2">
     Switch to the
-    <span class="flex items-start gap-1 font-semibold" >
+    <span class="flex items-start gap-1 font-semibold">
       {#if trigger == false}
         Dark Side
         <i class="ri-moon-fill leading-none"></i>

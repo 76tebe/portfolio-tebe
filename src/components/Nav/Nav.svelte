@@ -4,15 +4,17 @@
   import Switcher from "../Switcher.svelte";
 
   // export let scrolled;
+  // let state = "default";
+  let currentPage = "/";
 </script>
 
 <nav class="sticky top-0 flex w-screen items-center justify-between px-20 py-8 z-50">
   <Switcher trigger={false} />
   <ul class="flex gap-4 p-4">
-    <NavItem label="Home" href="/" />
-    <NavItem label="Projects" href="/" />
-    <NavItem label="Playground" href="/" />
-    <NavItem label="About" href="/about" />
+    <NavItem label="Home" href="/" {currentPage} />
+    <NavItem label="Projects" href="/projects" {currentPage} />
+    <NavItem label="Playground" href="/playground" {currentPage} />
+    <NavItem label="About" href="/about" {currentPage} />
   </ul>
   <div class="flex gap-2">
     <Button

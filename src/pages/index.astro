@@ -1,12 +1,17 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.svelte";
 import IndonesianFlag from "../assets/indonesia.svg";
 import { Separator } from "bits-ui";
 import Hero from "../components/Hero.svelte";
+import wonders from "../assets/wonders.png";
+import dreams from "../assets/dreams.png";
 
 const title = "Tebe's Portfolio";
+
+const optimizedWonders = await getImage({src: wonders, format: 'webp'})
+const optimizedDreams = await getImage({src: dreams, format: 'webp'})
 ---
 
 <Layout {title}>
@@ -37,15 +42,15 @@ const title = "Tebe's Portfolio";
           gradientTransform="translate(473.53 604.693) rotate(90) scale(660.154 391.966)"
         >
           <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
-          <stop offset="1" stop-color="#0F172A" stop-opacity="0"></stop>
+          <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
         </radialGradient>
       </defs>
     </svg>
     <svg
       class="absolute -right-1/4 -z-10"
-      width="500"
-      height="500"
-      viewBox="0 0 500 500"
+      width="1000"
+      height="1000"
+      viewBox="0 0 1000 1000"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -68,12 +73,12 @@ const title = "Tebe's Portfolio";
           gradientTransform="translate(504.27 504.27) rotate(90) scale(660.154 267.952)"
         >
           <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
-          <stop offset="1" stop-color="#0F172A" stop-opacity="0"></stop>
+          <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
         </radialGradient>
       </defs>
     </svg>
   <Main {title}>
-    <!-- <Hero> -->
+    <Hero>
 		<div class="h-full flex flex-col justify-evenly">
 			<div class="flex flex-col gap-6">
 			  <div class="introduction text-heading-1 flex flex-col gap-2">
@@ -81,7 +86,7 @@ const title = "Tebe's Portfolio";
 				<h1>a Product Designer based in Jakarta 🇮🇩</h1>
 			  </div>
 			  <div
-				class="flex text-body-1 text-[1.5rem] text-neutral-50 gap-4 items-center"
+				class="flex text-body-1 text-[1.5rem] text-neutral-60 gap-4 items-center"
 			  >
 				<p class="">
 				  Currently
@@ -91,7 +96,7 @@ const title = "Tebe's Portfolio";
 				  >
 				</p>
 				<Separator.Root
-				  class="w-0.5 h-6 bg-neutral-200"
+				  class="w-0.5 h-6 bg-neutral-10"
 				  orientation="horizontal"
 				  decorative={false}
 				/>
@@ -103,10 +108,10 @@ const title = "Tebe's Portfolio";
 			</div>
 			<div class="flex flex-col gap-10 pb-10 text-heading-1">
 			  <h1 class="text-[4rem] -tracking-[.64px]">
-				Designing <span
-				  class="bg-[url('/wonders.png')] bg-cover bg-no-repeat bg-clip-text text-transparent"
+				Designing <span style={`background-image: url(${optimizedWonders.src});`}
+				  class="bg-cover bg-no-repeat bg-clip-text text-transparent"
 				  >wonders</span
-				>, molding <span
+				>, molding <span style={`background-image: url(${optimizedDreams.src});`}
 				  class="bg-[url('/dreams.png')] bg-cover bg-no-repeat bg-clip-text text-transparent"
 				  >dreams</span
 				>.
@@ -118,7 +123,7 @@ const title = "Tebe's Portfolio";
 			  </h2>
 			</div>
 		</div>
-    <!-- </Hero> -->
+    </Hero>
   </Main>
 </Layout>
 

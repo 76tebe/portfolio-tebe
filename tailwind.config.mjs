@@ -9,18 +9,31 @@ export default {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
       },
-	  colors: {
-		'neutral-100': '#0f172a',
-		'neutral-90': '#1E293B',
-		'neutral-80': '#334155',
-		'neutral-70': '#475569',
-		'neutral-60': '#64748B',
-		'neutral-50': '#94A3B8',
-		'neutral-40': '#CBD5E1',
-		'neutral-30': '#E2E8F0',
-		'neutral-20': '#F1F5F9',
-		'neutral-10': '#F8FAFC'
-	  }
+      colors: {
+        "neutral-100": "#252525",
+        "neutral-90": "#404040",
+        "neutral-80": "#575a5f",
+        "neutral-70": "#71747a",
+        "neutral-60": "#91949d",
+        "neutral-50": "#9fa3ac",
+        "neutral-40": "#b2b5bd",
+        "neutral-30": "#bfc1c7",
+        "neutral-20": "#d3d5d9",
+        "neutral-10": "#e1e2e5",
+        "neutral-5": "#f5f6f7",
+
+        //deprecated
+          // 'neutral-100': '#0f172a',
+          // 'neutral-90': '#1E293B',
+          // 'neutral-80': '#334155',
+          // 'neutral-70': '#475569',
+          // 'neutral-60': '#64748B',
+          // 'neutral-50': '#94A3B8',
+          // 'neutral-40': '#CBD5E1',
+          // 'neutral-30': '#E2E8F0',
+          // 'neutral-20': '#F1F5F9',
+          // 'neutral-10': '#F8FAFC'
+      },
     },
     fontSize: {
       "heading-1": [
