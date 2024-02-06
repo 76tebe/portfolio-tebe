@@ -5,130 +5,143 @@ import Main from "../components/Main.svelte";
 import IndonesianFlag from "../assets/indonesia.svg";
 import { Separator } from "bits-ui";
 import Hero from "../components/Hero.svelte";
+import Container from "../components/Container.svelte";
 import wonders from "../assets/wonders.png";
 import dreams from "../assets/dreams.png";
+import grungeTexture from "../assets/grunge-texture.jpg";
 
 const title = "Tebe's Portfolio";
 
-const optimizedWonders = await getImage({src: wonders, format: 'webp'})
-const optimizedDreams = await getImage({src: dreams, format: 'webp'})
+const optimizedWonders = await getImage({ src: wonders, format: "webp" });
+const optimizedDreams = await getImage({ src: dreams, format: "webp" });
+const optimizedTexture = await getImage({ src: grungeTexture, format: "webp"});
+
 ---
 
 <Layout {title}>
-    <svg
-      class="absolute -top-[800px] -left-[320px] -z-10"
-      width="947"
-      height="1210"
-      viewBox="0 0 947 1210"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <ellipse
-        id="Ellipse 1"
-        cx="473.53"
-        cy="604.693"
-        rx="391.966"
-        ry="660.154"
-        transform="rotate(-30 473.53 604.693)"
-        fill="url(#paint0_radial_386_1447)"
-        fill-opacity="0.5"></ellipse>
-      <defs>
-        <radialGradient
-          id="paint0_radial_386_1447"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(473.53 604.693) rotate(90) scale(660.154 391.966)"
-        >
-          <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
-          <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
-        </radialGradient>
-      </defs>
-    </svg>
-    <svg
-      class="absolute -right-1/4 -z-10"
-      width="1000"
-      height="1000"
-      viewBox="0 0 1000 1000"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <ellipse
-        id="Ellipse 2"
-        cx="504.27"
-        cy="504.27"
-        rx="267.952"
-        ry="660.154"
-        transform="rotate(-45 504.27 504.27)"
-        fill="url(#paint0_radial_386_1446)"
-        fill-opacity="0.5"></ellipse>
-      <defs>
-        <radialGradient
-          id="paint0_radial_386_1446"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(504.27 504.27) rotate(90) scale(660.154 267.952)"
-        >
-          <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
-          <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
-        </radialGradient>
-      </defs>
-    </svg>
-  <Main {title}>
-    <Hero>
-		<div class="h-full flex flex-col justify-evenly">
-			<div class="flex flex-col gap-6">
-			  <div class="introduction text-heading-1 flex flex-col gap-2">
-				<h1>Meet Tebe! 🙋🏼‍♂️</h1>
-				<h1>a Product Designer based in Jakarta 🇮🇩</h1>
-			  </div>
-			  <div
-				class="flex text-body-1 text-[1.5rem] text-neutral-60 gap-4 items-center"
-			  >
-				<p class="">
-				  Currently
-				  <span
-					class="bg-gradient-to-br from-[#005BAA] from-35% to-[#EFAC21] to-100% bg-clip-text text-transparent"
-					>@Astra Financial</span
-				  >
-				</p>
-				<Separator.Root
-				  class="w-0.5 h-6 bg-neutral-10"
-				  orientation="horizontal"
-				  decorative={false}
-				/>
-				<p>
-				  Previously
-				  <span class="text-[#E0004D]">@Halodoc</span>
-				</p>
-			  </div>
-			</div>
-			<div class="flex flex-col gap-10 pb-10 text-heading-1">
-			  <h1 class="text-[4rem] -tracking-[.64px]">
-				Designing <span style={`background-image: url(${optimizedWonders.src});`}
-				  class="bg-cover bg-no-repeat bg-clip-text text-transparent"
-				  >wonders</span
-				>, molding <span style={`background-image: url(${optimizedDreams.src});`}
-				  class="bg-[url('/dreams.png')] bg-cover bg-no-repeat bg-clip-text text-transparent"
-				  >dreams</span
-				>.
-			  </h1>
-			  <h2
-				class="text-[2.25rem] -tracking-[.36px] text-neutral-50 font-normal"
-			  >
-				His creativity sparks magic in every pixel.
-			  </h2>
-			</div>
-		</div>
-    </Hero>
-  </Main>
+  <svg
+    class="absolute -top-[800px] -left-[320px] -z-10"
+    width="947"
+    height="1210"
+    viewBox="0 0 947 1210"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <ellipse
+      id="Ellipse 1"
+      cx="473.53"
+      cy="604.693"
+      rx="391.966"
+      ry="660.154"
+      transform="rotate(-30 473.53 604.693)"
+      fill="url(#paint0_radial_386_1447)"
+      fill-opacity="0.5"></ellipse>
+    <defs>
+      <radialGradient
+        id="paint0_radial_386_1447"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(473.53 604.693) rotate(90) scale(660.154 391.966)"
+      >
+        <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
+        <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+  </svg>
+  <svg
+    class="absolute -right-1/4 -z-10"
+    width="1000"
+    height="1000"
+    viewBox="0 0 1000 1000"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <ellipse
+      id="Ellipse 2"
+      cx="504.27"
+      cy="504.27"
+      rx="267.952"
+      ry="660.154"
+      transform="rotate(-45 504.27 504.27)"
+      fill="url(#paint0_radial_386_1446)"
+      fill-opacity="0.5"></ellipse>
+    <defs>
+      <radialGradient
+        id="paint0_radial_386_1446"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(504.27 504.27) rotate(90) scale(660.154 267.952)"
+      >
+        <stop stop-color="#FFFFFF" stop-opacity="0.4"></stop>
+        <stop offset="1" stop-color="#252525" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+  </svg>
+  <!-- <Main {title}> -->
+  <Hero>
+    <div class="h-full flex flex-col justify-evenly">
+      <Container bgImage={false}>
+        <div class="flex flex-col gap-6">
+          <div class="introduction text-heading-1 flex flex-col gap-2">
+            <h1>Meet Tebe! 🙋🏼‍♂️</h1>
+            <h1>a Product Designer based in Jakarta 🇮🇩</h1>
+          </div>
+          <div
+            class="flex text-body-1 text-[1.5rem] text-neutral-60 gap-4 items-center"
+          >
+            <p class="">
+              Currently
+              <span
+                class="bg-gradient-to-br from-[#005BAA] from-35% to-[#EFAC21] to-100% bg-clip-text text-transparent"
+                >@Astra Financial</span
+              >
+            </p>
+            <Separator.Root
+              class="w-0.5 h-6 bg-neutral-10"
+              orientation="horizontal"
+              decorative={false}
+            />
+            <p>
+              Previously
+              <span class="text-[#E0004D]">@Halodoc</span>
+            </p>
+          </div>
+        </div>
+      </Container>
+      <Container full={true} bgImage={true} bgUrl={optimizedTexture.src}>
+        <div class="flex flex-col gap-10 pb-10 text-heading-1 text-white">
+          <h1 class="text-[4rem] -tracking-[.64px]">
+            Designing <span
+              style={`background-image: url(${optimizedWonders.src});`}
+              class="bg-cover bg-no-repeat bg-clip-text text-transparent"
+              >wonders</span
+            >, molding <span
+              style={`background-image: url(${optimizedDreams.src});`}
+              class="bg-[url('/dreams.png')] bg-cover bg-no-repeat bg-clip-text text-transparent"
+              >dreams</span
+            >.
+          </h1>
+          <h2
+            class="text-[2.25rem] -tracking-[.36px] text-neutral-20 font-normal"
+          >
+            His creativity sparks magic in every pixel.
+          </h2>
+        </div>
+      </Container>
+    </div>
+  </Hero>
+  <!-- </Main> -->
 </Layout>
 
 <style>
-	.introduction {
-		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>👋</text></svg>") 15 10,auto;
-	}
+  .introduction {
+    cursor:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>👋</text></svg>")
+        15 10,
+      auto;
+  }
 </style>
