@@ -36,7 +36,7 @@
           transition:draw={{ duration: 300 }}
           id="mark"
           d={mark}
-          stroke="#334155"
+          stroke="#252525"
           stroke-width="2"
           stroke-linecap="round"
         />

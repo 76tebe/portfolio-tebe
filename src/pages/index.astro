@@ -2,20 +2,21 @@
 import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.svelte";
-import IndonesianFlag from "../assets/indonesia.svg";
 import { Separator } from "bits-ui";
 import Hero from "../components/Hero.svelte";
 import Container from "../components/Container.svelte";
 import wonders from "../assets/wonders.png";
 import dreams from "../assets/dreams.png";
 import grungeTexture from "../assets/grunge-texture.jpg";
+import Card from "../components/Card.astro";
+import MasonryGrid from "../components/MasonryGrid.astro";
+import Chips from "../components/Chips.svelte";
 
 const title = "Tebe's Portfolio";
 
 const optimizedWonders = await getImage({ src: wonders, format: "webp" });
 const optimizedDreams = await getImage({ src: dreams, format: "webp" });
-const optimizedTexture = await getImage({ src: grungeTexture, format: "webp"});
-
+const optimizedTexture = await getImage({ src: grungeTexture, format: "webp" });
 ---
 
 <Layout {title}>
@@ -135,6 +136,35 @@ const optimizedTexture = await getImage({ src: grungeTexture, format: "webp"});
     </div>
   </Hero>
   <!-- </Main> -->
+  <Main {title}>
+    <MasonryGrid>
+      <div class="grid gap-4">
+        <Card src={wonders} alt="Image of Color Gradient" {onmouseenter= () => elevation = true}>
+          <div class="flex justify-between items-center">
+            <div class="flex gap-2">
+              <Chips mode="dark" size="small">
+                <i class="ri-apps-line font-normal"></i>
+                Label
+              </Chips>
+              <Chips mode="dark" size="small">
+                <i class="ri-apps-line font-normal"></i>
+                Label
+              </Chips>
+            </div>
+            <h4 class="text-heading-4">2022</h4>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="text-heading-3">Eksporeal</h3>
+            <p>
+              A single window export marketplace that aims to help Micro, Small,
+              and Medium Enterprises (MSMEs) in Indonesia to export their
+              commodities to the global market.
+            </p>
+          </div>
+        </Card>
+      </div>
+    </MasonryGrid>
+  </Main>
 </Layout>
 
 <style>
