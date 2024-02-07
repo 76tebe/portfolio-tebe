@@ -2,20 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.svelte";
 import Button from "../components/Button/Button.svelte";
+import { Image } from "astro:assets";
+import Fence from "../assets/fence.png";
 const title = "Oops! You are lost";
 ---
 
 <Layout {title}>
   <Main {title}>
-    
-    <div class="max-w-screen-sm flex flex-col gap-8 mx-auto text-center p-10 text-pretty">
-      <h1 class="text-heading-1 text-center">
-        Oops! Looks like you've stumbled in void 👾
-      </h1>
-      <p class="text-neutral-50">
-        Looks like you've stumbled into the digital wilderness. No worries, even
-        the best adventurers take a wrong turn now and then. Don't worry, let's navigate our way back to the starting point."
-      </p>
+    <div class="max-w-screen-sm flex flex-col gap-10 mx-auto text-center p-10 text-pretty">
+      <div class="flex justify-center w-full p-6 rounded-2xl">
+        <Image src={Fence} alt="Scribble - depicting void" width={360}/>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h1 class="text-heading-1 text-center">
+          Oops! Looks like you've stumbled in void 👾
+        </h1>
+        <p class="text-body-1 text-neutral-50">
+          Looks like you've stumbled into the digital wilderness. No worries, even
+          the best adventurers take a wrong turn now and then. Don't worry, let's navigate our way back to the starting point."
+        </p>
+      </div>
       <Button type="primary" href="/" target="" idleLabel="Take Me Home" hoveredLabel="Country Road ♫" />
     </div>
   </Main>
