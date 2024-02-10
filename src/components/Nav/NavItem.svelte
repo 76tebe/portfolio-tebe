@@ -18,7 +18,7 @@
 <li>
   <a
     href={href}
-    class="inline-flex justify-center items-center px-4 py-3 text-body-2 leading-6 text-neutral-60 hover:font-medium hover:text-neutral-90 {currentPage === href ? 'active:font-semibold active:text-neutral-90' : ''}"
+    class="inline-flex justify-center items-center px-4 py-3 text-body-2 leading-6 text-neutral-60 hover:font-medium hover:text-content-primary {currentPage === href ? 'active:font-semibold active:text-content-primary' : ''}"
     on:mouseenter={() => (currentPage = href)}
     on:mouseleave={() => (currentPage = "/")}
   >

@@ -10,29 +10,37 @@ export default {
         sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "neutral-100": "#252525",
-        "neutral-90": "#404040",
-        "neutral-80": "#575a5f",
-        "neutral-70": "#71747a",
-        "neutral-60": "#91949d",
-        "neutral-50": "#9fa3ac",
-        "neutral-40": "#b2b5bd",
-        "neutral-30": "#bfc1c7",
-        "neutral-20": "#d3d5d9",
-        "neutral-10": "#e1e2e5",
-        "neutral-5": "#f5f6f7",
+        // Primitive colors
+        neutral: {
+          100: "rgba(var(--neutral-100), <alpha-value>)",
+          90: "rgba(var(--neutral-90), <alpha-value>)",
+          80: "rgba(var(--neutral-80), <alpha-value>)",
+          70: "rgba(var(--neutral-70), <alpha-value>)",
+          60: "rgba(var(--neutral-60), <alpha-value>)",
+          50: "rgba(var(--neutral-50), <alpha-value>)",
+          40: "rgba(var(--neutral-40), <alpha-value>)",
+          30: "rgba(var(--neutral-30), <alpha-value>)",
+          20: "rgba(var(--neutral-20), <alpha-value>)",
+          10: "rgba(var(--neutral-10), <alpha-value>)",
+          5: "rgba(var(--neutral-5), <alpha-value>)",
+        },
 
-        //deprecated
-          // 'neutral-100': '#0f172a',
-          // 'neutral-90': '#1E293B',
-          // 'neutral-80': '#334155',
-          // 'neutral-70': '#475569',
-          // 'neutral-60': '#64748B',
-          // 'neutral-50': '#94A3B8',
-          // 'neutral-40': '#CBD5E1',
-          // 'neutral-30': '#E2E8F0',
-          // 'neutral-20': '#F1F5F9',
-          // 'neutral-10': '#F8FAFC'
+        // Alias colors
+        accent: "rgba(var(--accent), <alpha-value>)",
+        'background-primary': "rgba(var(--background-primary), <alpha-value>)",
+        surface: "rgba(var(--surface), <alpha-value>)",
+
+        content: {
+          primary: "rgba(var(--content-primary), <alpha-value>)",
+          weak: "rgba(var(--content-weak), <alpha-value>)",
+          weaker: "rgba(var(--content-weaker), <alpha-value>)",
+          weakest: "rgba(var(--content-weakest), <alpha-value>)"
+        },
+
+        border: {
+          primary: "rgba(var(--neutral-20), <alpha-value>)",
+          hover: "rgba(var(--neutral-30), <alpha-value>)",
+        }
       },
     },
     fontSize: {

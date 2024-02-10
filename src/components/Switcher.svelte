@@ -41,14 +41,14 @@
 </script>
 
 <div
-  class="flex gap-4 items-center text-neutral-90 transition-all duration-300"
+  class="flex gap-4 items-center text-content-primary transition-all duration-300"
 >
   <button
     on:click={switcher}
     class="
   flex w-20 h-20 justify-center items-center rounded-xl border-[0.5px]
   {trigger == false
-      ? 'border-neutral-20 bg-gradient-to-b from-white from-0% to-neutral-5 to-100%'
+      ? 'border-border-primary bg-gradient-to-b from-white from-0% to-neutral-5 to-100%'
       : 'border-neutral-60 bg-gradient-to-b from-neutral-80 from-[-30%] to-neutral-40 to-100%'}"
   >
     <div class="trigger">

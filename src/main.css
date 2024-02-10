@@ -7,14 +7,67 @@
     font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   }
 
+  :root {
+    /* Primitive colors */
+    --neutral-100: 37, 37, 37;
+    --neutral-90: 64, 64, 64;
+    --neutral-80: 87, 90, 95;
+    --neutral-70: 113, 116, 122;
+    --neutral-60: 145, 148, 157;
+    --neutral-50: 159, 163, 172;
+    --neutral-40: 178, 181, 189;
+    --neutral-30: 191, 193, 199;
+    --neutral-20: 211, 213, 217;
+    --neutral-10: 225, 226, 229;
+    --neutral-5: 245, 246, 247;
+
+    /* Alias colors */
+    --accent: var(--neutral-100);
+
+    --background-primary: white;
+    --surface: white;
+
+    --content-primary: var(--neutral-90);
+    --content-weak: var(--neutral-60);
+    --content-weaker: var(--neutral-50);
+    --content-weakest: var(--neutral-20);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Primitive colors */
+      /* --neutral-100: 37, 37, 37;
+      --neutral-90: 64, 64, 64;
+      --neutral-80: 87, 90, 95;
+      --neutral-70: 113, 116, 122;
+      --neutral-60: 145, 148, 157;
+      --neutral-50: 159, 163, 172;
+      --neutral-40: 178, 181, 189;
+      --neutral-30: 191, 193, 199;
+      --neutral-20: 211, 213, 217;
+      --neutral-10: 225, 226, 229;
+      --neutral-5: 245, 246, 247; */
+
+      /* Alias colors */
+    --accent: white;
+
+    --background-primary: var(--neutral-100);
+    --surface: var(--neutral-100);
+
+    --content-primary: white;
+    --content-weak: var(--neutral-70);
+    --content-weaker: var(--neutral-40);
+    --content-weakest: var(--neutral-60);
+    }
+  }
+
   ::-moz-selection {
-    background: #FFF56A;
+    background: #fff56a;
     color: #404040;
   }
-  
+
   ::selection {
-    background: #FFF56A;
+    background: #fff56a;
     color: #404040;
   }
 }
-

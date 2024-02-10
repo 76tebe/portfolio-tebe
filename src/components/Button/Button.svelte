@@ -14,8 +14,8 @@
   {href} {target}
   class="btn flex flex-col items-center overflow-hidden px-4 py-3 h-12 text-button
   {type == 'primary'
-    ? 'bg-neutral-100 text-white'
-    : 'text-neutral-100 border-2 border-neutral-20'} rounded-[10px]"
+    ? 'bg-accent text-white'
+    : 'text-accent border-2 border-border-primary'} rounded-[10px]"
 >
   <span>
     <em>

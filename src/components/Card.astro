@@ -1,15 +1,41 @@
 ---
 import { Image } from "astro:assets";
 
-const { href, src, alt, elevation = false } = Astro.props;
+const { href, src, alt } = Astro.props;
 ---
 
-<a {href} class="relative">
-  <Image {src} {alt} class=`absolute h-auto w-full object-cover rounded-3xl blur-xl ${elevation == false ? "hidden" : ''}`/>
-  <Image {src} {alt} class="h-auto w-full object-cover rounded-3xl"/>
+<a {href} class="relative" id="card-project">
+  <Image
+    {src}
+    {alt}
+    id="elevation-card"
+    class="absolute h-auto w-full object-cover rounded-3xl blur-xl hidden transition-all duration-1000"
+  />
+  <Image {src} {alt} class="h-auto w-full object-cover rounded-3xl" />
   <div
     class="absolute top-0 w-full h-full flex flex-col justify-between p-8 bg-gradient-to-b from-black/25 from-0% to-black/65 to-100% backdrop-blur-2xl rounded-3xl text-white"
   >
     <slot />
   </div>
 </a>
+
+<script>
+  //   let elevation: Boolean;
+  const cardProject = document.getElementById("card-project");
+  const cardElevation = document.getElementById("elevation-card");
+
+  cardProject.addEventListener("mouseover", () => {
+    cardElevation.classList.remove("hidden");
+  });
+
+  cardProject.addEventListener("mouseleave", () => {
+    cardElevation.classList.add("hidden");
+  });
+
+  //   cardElevation.forEach((elevate) => {
+  //   cardElevation.addEventListener("mouseover", () => {
+  //     cardElevation.classList.add("hidden");
+  //     console.log("class hidden removed");
+  //   });
+  //   });
+</script>

@@ -84,7 +84,7 @@ const optimizedTexture = await getImage({ src: grungeTexture, format: "webp" });
   </svg>
   <!-- <Main {title}> -->
   <Hero>
-    <div class="h-full flex flex-col justify-evenly">
+    <div class="h-full flex flex-col pt-20 justify-between">
       <Container bgImage={false}>
         <div class="flex flex-col gap-6">
           <div class="introduction text-heading-1 flex flex-col gap-2">
@@ -92,7 +92,7 @@ const optimizedTexture = await getImage({ src: grungeTexture, format: "webp" });
             <h1>a Product Designer based in Jakarta 🇮🇩</h1>
           </div>
           <div
-            class="flex text-body-1 text-[1.5rem] text-neutral-60 gap-4 items-center"
+            class="flex text-body-1 text-[1.5rem] text-content-weak gap-4 items-center"
           >
             <p class="">
               Currently
@@ -113,8 +113,8 @@ const optimizedTexture = await getImage({ src: grungeTexture, format: "webp" });
           </div>
         </div>
       </Container>
-      <Container full={true} bgImage={true} bgUrl={optimizedTexture.src}>
-        <div class="flex flex-col gap-10 pb-10 text-heading-1 text-white">
+      <Container bgImage={true} bgUrl={optimizedTexture.src}>
+        <div class="flex flex-col gap-10 pb-10 text-heading-1 text-white leading-[150%]">
           <h1 class="text-[4rem] -tracking-[.64px]">
             Designing <span
               style={`background-image: url(${optimizedWonders.src});`}
@@ -139,8 +139,8 @@ const optimizedTexture = await getImage({ src: grungeTexture, format: "webp" });
   <Main {title}>
     <MasonryGrid>
       <div class="grid gap-4">
-        <Card src={wonders} alt="Image of Color Gradient" {onmouseenter= () => elevation = true}>
-          <div class="flex justify-between items-center">
+        <Card href="/" src={wonders} alt="Image of Color Gradient">
+          <div class="flex justify-between items-center ">
             <div class="flex gap-2">
               <Chips mode="dark" size="small">
                 <i class="ri-apps-line font-normal"></i>
